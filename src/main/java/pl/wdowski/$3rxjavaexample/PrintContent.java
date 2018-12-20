@@ -17,7 +17,7 @@ public class PrintContent {
     private static final Logger LOGGER = LoggerFactory.getLogger(PrintContent.class);
 
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         printArray();
         printJust();
         printList();
