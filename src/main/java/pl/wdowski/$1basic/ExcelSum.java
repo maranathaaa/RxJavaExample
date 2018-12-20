@@ -1,4 +1,4 @@
-package pl.wdowski.basic;
+package pl.wdowski.$1basic;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
@@ -67,6 +67,12 @@ public class ExcelSum {
             this.sum = 0;
             Observable<Double> doubleObservable = Observable.combineLatest(aObservable, bObservable, (a, b) -> a + b);
             doubleObservable.subscribe(this);
+
+            //or subscribe with functions not Observer
+
+            doubleObservable.subscribe(sum -> LOGGER.info("Sum: " + sum),
+                    error -> LOGGER.error("Got error", error),
+                    () -> LOGGER.info("Exit: " + sum));
         }
 
         @Override

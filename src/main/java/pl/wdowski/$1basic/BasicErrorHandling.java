@@ -1,4 +1,4 @@
-package pl.wdowski.basic;
+package pl.wdowski.$1basic;
 
 import io.reactivex.Observable;
 import org.slf4j.Logger;
