@@ -1,6 +1,7 @@
 package pl.wdowski.$3rxjavaexample;
 
 import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -92,8 +93,8 @@ public class PrintContent {
         }
     }
 
-    private static <T> void subscribePrint(Observable<T> observable, String name) {
-        observable.subscribe(
+    public static <T> Disposable subscribePrint(Observable<T> observable, String name) {
+        return observable.subscribe(
                 (v) -> System.out.println(name + " : " + v),
                 (e) -> {
                     System.err.println("Error from " + name + ":");
