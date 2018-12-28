@@ -13,9 +13,9 @@ public class SubjectExample {
 
 //        createPublishSubject();
 //        createReplySubject();
-//        createBehaviourSubject();
+        createBehaviourSubject();
 
-        createAsyncSubject();
+//        createAsyncSubject();
     }
 
     private static void createAsyncSubject() {
